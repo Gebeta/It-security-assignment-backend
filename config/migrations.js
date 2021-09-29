@@ -10,6 +10,7 @@ const permissions = [
     'view their feedback',
     'view feedback',
     'remove feedback',
+    'view file'
 
 ]
 
@@ -19,7 +20,8 @@ const roles = {
         'view user',
         'update user',
         'create feedback',
-        'view their feedback'
+        'view their feedback',
+        'view file'
     ],
     
 }

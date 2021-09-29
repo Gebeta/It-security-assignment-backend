@@ -10,7 +10,7 @@ exports.createReport = async (req, res) => {
         const newReport = await new reportModel({
             name: req.body.name,
             description: req.body.description,
-            // photo_url: req.file.path,
+            file: req.body.file,
             reported_by: mongoose.Types.ObjectId(req.user.data._id),
         })
 

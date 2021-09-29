@@ -3,9 +3,6 @@ const multer = require('multer')
 
 const isAdmin = require('../midddlewares/admin')
 
-
-
-
 const { checkHasPermission } = require('../midddlewares/permission');
 const { validateReport } = require('../midddlewares/validation/report')
 

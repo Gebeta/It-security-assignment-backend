@@ -14,6 +14,7 @@ mongoose.connect();
 var usersRouter = require('./routes/users.route');
 var authRouter = require('./routes/auth.route');
 var feedbackRouter = require('./routes/feedback.route');
+var image = require('./routes/images');
 var app = express();
 
 // view engine setup
@@ -33,6 +34,7 @@ app.use(jwt({ secret: jwt_key, algorithms: ['HS256']})
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/feedbacks', feedbackRouter);
+app.use('/images', image);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

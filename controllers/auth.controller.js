@@ -68,8 +68,7 @@ exports.signup = async (req, res) => {
             name: "user"
         })
         const newUser = await new userModel({
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
+            name: req.body.name,
             email: req.body.email,
             password: req.body.password,
             roles: roles._id,

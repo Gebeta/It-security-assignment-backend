@@ -11,8 +11,7 @@ exports.validatRequest = schemaName => async (req,res,next) => {
             }),
         createUser: () => 
             Joi.object({
-                first_name: Joi.string(),
-                last_name: Joi.string(),
+                name: Joi.string(),
                 email: Joi.string().email(),
                 password: Joi.string().required()
                     .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
