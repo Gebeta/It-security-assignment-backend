@@ -68,9 +68,9 @@ exports.signup = async (req, res) => {
             name: "user"
         })
         const newUser = await new userModel({
-            name: req.body.name,
-            email: req.body.email,
-            password: req.body.password,
+            name: String(req.body.name),
+            email: String(req.body.email),
+            password: String(req.body.password),
             roles: roles._id,
         })
 

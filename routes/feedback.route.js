@@ -29,12 +29,11 @@ router.post('/', checkHasPermission("create feedback"),  reportController.create
 
 router.get('/myReport', checkHasPermission("view their feedback"), reportController.viewMyReport);
 
-
 router.get('/', checkHasPermission("view all feedback"), reportController.viewAllReport);
 
+router.get('/:id', checkHasPermission("view their feedback"), reportController.viewReportById);
 
-router.get('/:id', checkHasPermission("view all feedback"), reportController.viewReportById);
-
+router.put('/:id', checkHasPermission("update feedback"), reportController.updateMyReport);
 
 router.delete('/:id', checkHasPermission("remove issue"), isAdmin, reportController.removeReport);
 
